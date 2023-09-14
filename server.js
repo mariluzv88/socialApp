@@ -9,6 +9,7 @@ app.use(express.json());
 
 app.use('/api/users', require('./routes/user'));
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/posts', require('./routes/post'));
 app.get('/', (req, res)=> {
     res.send("Hello")
   });

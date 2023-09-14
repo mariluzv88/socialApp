@@ -1,4 +1,5 @@
 const User = require('../models/User')
+const Post = require('../models/Post')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const  handleError  = require('../error')
@@ -28,6 +29,7 @@ const deleteUser = async (req,res)=>{
     if(req.params.id === req.user.id){
     try{
     await User.findByIdAndDelete(req.params.id)
+    await Post.remove({userID: req.params.id})
      res.status(200).json("delete works")
     }catch(err){
      next(err)
