@@ -5,9 +5,9 @@ function Mid() {
     <div className='mid'>
         <p>USERNAME</p>
         <form>
-            <input  className='postText'type='text'/>
+            <textarea  className='postText'type='text'placeholder='catch a vibe' maxLength={280}/>
         </form>
-        <p>Main post goes here</p>
+        <button>CREATE</button><hr/>
     </div>
   )
 }

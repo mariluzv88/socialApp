@@ -1,8 +1,15 @@
 import React from 'react'
+import Left from '../../components/Left'
+import Mid from '../../components/Mid'
+import Right from '../../components/Right'
 
 function Profile() {
   return (
-    <div>Profile</div>
+    <div className='home'>
+      <Left/>
+      <div></div>
+      <Right/>
+    </div>
   )
 }
 
